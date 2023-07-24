@@ -1,0 +1,129 @@
+.safe-area{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.breadcrumb-root{
+  background: #F5F5F5;
+  border-radius: 24px;
+  width: 100%;
+  margin: 16px auto 0;
+  .breadcrumb-wrapper{
+    padding: 8px 16px;
+    ul{
+      display: flex;
+      align-items: center;
+
+      li{
+        position: relative;
+        margin: 0 0 0 24px;
+        &:first-child{
+          margin: 0;
+          &:before,&:after{
+            display: none;
+          }
+        }
+        span{
+          font-family: Nunito Sans;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 19px;
+          letter-spacing: 0px;
+          text-align: left;
+
+
+        }
+        svg{
+          width: 24px;
+          height: 24px;
+        }
+        &:before{
+          content: "";
+          width: 6px;
+          height: 6px;
+          background: #000;
+          position: absolute;
+          top: 50%;
+          right: -12px;
+          -webkit-transform: translateY(-50%) rotate(135deg);
+          transform: translateY(-50%) rotate(135deg);
+        }
+        &:after{
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -20px;
+          width: 0;
+          height: 0;
+          border-color: #F5F5F5;
+          border-style: solid;
+          border-width: 0 14px 8px;
+          -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+        }
+        &.active{
+          span{
+            color:#FF8D27;
+          }
+          &:before,&:after{
+            display: none;
+          }
+        }
+        a{
+          width: 24px;
+          height: 24px;
+        }
+        &:hover{
+          svg{
+            path{
+              stroke:#FF8D27 ;
+            }
+          }
+          span{
+            color:#FF8D27;
+          }
+        }
+      }
+    }
+  }
+
+}
+.content-title-container{
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  max-width: 580px;
+  .content-block{
+    padding: 8px 16px;
+    border-radius: 32px;
+    background: #FFFFFF;
+    margin: 0 0 0 8px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    span{
+      font-family: Nunito Sans;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #5E5E5E;
+      white-space: nowrap;
+    }
+    &:first-child{
+      margin: 0;
+    }
+    &.active{
+      border-color: #FF8D27;
+      span{
+        color: #FF8D27;
+      }
+    }
+    &:hover{
+      border-color: #FF8D27;
+      span{
+        color: #FF8D27;
+      }
+    }
+  }
+}
