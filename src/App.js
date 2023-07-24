@@ -11,9 +11,9 @@ const App = () => {
 
 
                     <Routes>
-                        <Route exact path="/" component={BlogTable} />
-                        <Route path="/posts/:postId" component={PostDetail} />
-                    </Routes>
+        <Route path="/" element={<BlogTable />} />
+        <Route path="/posts/:postId" element={<PostDetail />} />
+      </Routes>
 
 
         </div>
